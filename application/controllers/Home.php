@@ -13,4 +13,9 @@ class Home extends CI_Controller {
 	function index() { 
 		redirect('login');
 	}
+
+	function dashboard() {
+		//redirect('novo');
+		$this->load->view('view_dashboard');
+	}
 }
