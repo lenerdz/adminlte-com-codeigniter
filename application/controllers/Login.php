@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('url');
@@ -10,7 +10,8 @@ class Home extends CI_Controller {
 		date_default_timezone_set('America/Sao_Paulo');
 	}
 
-	function index() { 
-		redirect('login');
+	public function index() { 
+		$this->load->helper(array('form'));
+		$this->load->view('view_login');
 	}
 }
